@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIVERSÁRIO PREMIADO DO TIGRINHO!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌟 COLUNAS DE GIFS LATERAIS (ESTILO CASSINO - 5 GIFs) 🌟 -->
+<div class="coluna-gif esquerda">
+    <img src="fotos/love.gif" alt="love">
+    <img src="fotos/abraco.gif" alt="Abraço">
+    <img src="fotos/danca.gif" alt="Dança">
+    <img src="fotos/pinguim.gif" alt="Pinguim">
+    <img src="fotos/pato.gif" alt="Pato">
+</div>
+
+<div class="coluna-gif direita">
+    <img src="fotos/love.gif" alt="love">
+    <img src="fotos/abraco.gif" alt="Abraço">
+    <img src="fotos/danca.gif" alt="Dança">
+    <img src="fotos/pinguim.gif" alt="Pinguim">
+    <img src="fotos/pato.gif" alt="Pato">
+</div>
+
+<!-- Cabeçalho de Cassino (Sem o Contador) -->
+<header>
+    <h1 class="pisca-pisca">
+        <img src="fotos/brilho.gif" class="gif-brilho" alt="sparkle">
+        ⚡ JACKPOT DE ANIVERSÁRIO ⚡
+        <img src="fotos/brilho.gif" class="gif-brilho" alt="sparkle">
+    </h1>
+    <h1 class="pisca-pisca">⚡ FELIZ ANIVERSÁRIO MATHEUS ⚡</h1>
+</header>
+
+<main>
+    <!-- ÁREA EXCLUSIVA PARA OS BALÕES FLUTUAREM -->
+    <div class="mural-container-flutuante">
+        <div id="mural-container"></div>
+    </div>
+
+    <!-- MENU DOS AMIGOS CENTRALIZADO -->
+    <section class="amigos-secao">
+        <h2>🎁 Abra todos os envelopes para liberar o grande bônus!</h2>
+        <div class="grade-amigos">
+
+            <!-- Amiga 1: Laura -->
+            <div class="card-amigo" data-amigo="Laura" data-nome="Laura">
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="aba"></div>
+                        <div class="corpo">
+                            <span class="simbolo-ouro">🧧</span>
+                        </div>
+                        <img src="fotos/lauro1.png" class="foto-perfil" alt="Laura">
+                    </div>
+                </div>
+                <h3 class="nome-amigo">?</h3>
+            </div>
+
+            <!-- Amiga 2: Linka -->
+            <div class="card-amigo" data-amigo="Linka" data-nome="Linka">
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="aba"></div>
+                        <div class="corpo">
+                            <span class="simbolo-ouro">🧧</span>
+                        </div>
+                        <img src="fotos/liniker1.jpg" class="foto-perfil" alt="Linka">
+                    </div>
+                </div>
+                <h3 class="nome-amigo">?</h3>
+            </div>
+
+            <!-- Amiga 3: Josie -->
+            <div class="card-amigo" data-amigo="Josie" data-nome="Josie">
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="aba"></div>
+                        <div class="corpo">
+                            <span class="simbolo-ouro">🧧</span>
+                        </div>
+                        <img src="fotos/jose1.jpg" class="foto-perfil" alt="Josie">
+                    </div>
+                </div>
+                <h3 class="nome-amigo">?</h3>
+            </div>
+
+            <!-- Amiga 4: Dani -->
+            <div class="card-amigo" data-amigo="Dani" data-nome="Dani">
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="aba"></div>
+                        <div class="corpo">
+                            <span class="simbolo-ouro">🧧</span>
+                        </div>
+                        <img src="fotos/deni1.jpg" class="foto-perfil" alt="Dani">
+                    </div>
+                </div>
+                <h3 class="nome-amigo">?</h3>
+            </div>
+
+            <!-- Amigo 5 -->
+            <div class="card-amigo" data-amigo="amigo5" data-nome="Wendy">
+                <div class="envelope-container">
+                    <div class="envelope">
+                        <div class="aba"></div>
+                        <div class="corpo">
+                            <span class="simbolo-ouro">🧧</span>
+                        </div>
+                        <img src="fotos/pudim1.png" class="foto-perfil" alt="Wendy">
+                    </div>
+                </div>
+                <h3 class="nome-amigo">?</h3>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- POP-UP DO ÁLBUM (MODAL PADRÃO) -->
+<div id="modal-album" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar-modal">&times; FECHAR</span>
+        <h2 id="modal-titulo-amigo">Álbum de Fotos</h2>
+        <div id="modal-fotos-container"></div>
+    </div>
+</div>
+
+<!-- 🌟 MODAL DO PRÊMIO MÁXIMO (VÍDEO DO JACKPOT) 🌟 -->
+<div id="modal-jackpot" class="modal-especial">
+    <div class="modal-jackpot-conteudo">
+        <div class="texto-jackpot-animado">💥 JACKPOT LIBERADO! 💥</div>
+        <h2>🎉 PARABÉNS MATHEUS! 🎉</h2>
+        <p>Você completou o bônus do Tigrinho e ativou a recompensa lendária!</p>
+
+        <div class="video-container">
+            <video id="video-premio" controls>
+                <source src="fotos/video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+        </div>
+        <button id="btn-fechar-jackpot">COLETAR PREMIAÇÃO 🤑</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
